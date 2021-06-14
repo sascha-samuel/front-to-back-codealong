@@ -1,4 +1,4 @@
-const genres = [
+const genreList = [
   { id: 1, name: 'Electronic' },
   { id: 2, name: 'Cosmic' },
   { id: 3, name: 'Rock' },
@@ -8,7 +8,7 @@ const genres = [
 
 exports.up = async function up(sql) {
   await sql`
-	INSERT INTO genres ${sql(genres, 'id', 'name')}
+	INSERT INTO genres ${sql(genreList, 'id', 'name')}
 `;
 };
 

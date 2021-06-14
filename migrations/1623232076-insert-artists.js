@@ -1,4 +1,4 @@
-const artists = [
+const artistList = [
   { id: 1, name: 'Mystery Mammal' },
   { id: 2, name: 'Monplaisir' },
   { id: 3, name: 'Arrizabalaga, Bravo, Laginestra, Martinez' },
@@ -6,7 +6,7 @@ const artists = [
 
 exports.up = async function up(sql) {
   await sql`
-	INSERT INTO artists ${sql(artists, 'id', 'name')}
+	INSERT INTO artists ${sql(artistList, 'id', 'name')}
 `;
 };
 

@@ -1,4 +1,4 @@
-const songs = [
+const songList = [
   {
     name: 'The First Noel',
     slug: 'xmas-in-space/the-first-noel',
@@ -151,7 +151,7 @@ const songs = [
 exports.up = async function up(sql) {
   await sql`
 	INSERT INTO songs ${sql(
-    songs,
+    songList,
     'name',
     'slug',
     'artist_id',
