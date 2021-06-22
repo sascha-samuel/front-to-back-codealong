@@ -8,7 +8,10 @@ import { sql } from './postgresConfig';
 // 1. Please create a function getArtists() that perform a SQL query to our database and return an array of artists
 
 export async function getArtists() {
-  // add code here...
+  const artists = await sql`
+  SELECT * FROM artists
+  `;
+  return artists;
 }
 
 // After task is complete
