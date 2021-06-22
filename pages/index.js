@@ -37,7 +37,7 @@ export default function Home({ albums, artists, genres, songs }) {
       <AudioPlayer activeSong={activeSong} />
       <section className="filter-section">
         <FilterInput
-          options={genreList} // genreList from assets directory
+          options={genres} // genreList from assets directory
           value={genreFilter} // genreFilter from useState()
           filterSetter={setGenreFilter} // setGenreFilter from useState()
           name="genre"
